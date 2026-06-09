@@ -1,0 +1,38 @@
+{
+  "name": "@odel/foobar",
+  "version": "0.1.0",
+  "description": "FooBar — the Odel reference / test module exercising @odel/module-sdk end-to-end",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev"
+  },
+  "keywords": [
+    "odel",
+    "mcp",
+    "model-context-protocol",
+    "module",
+    "reference",
+    "cloudflare-workers"
+  ],
+  "author": "Odel",
+  "license": "MIT",
+  "dependencies": {
+    "@odel/module-sdk": "^2.0.0",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250110.0",
+    "typescript": "^5.9.2",
+    "vitest": "~3.2.0",
+    "wrangler": "^3.102.0"
+  },
+  "packageManager": "pnpm@10.20.0",
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild", "workerd"]
+  }
+}
